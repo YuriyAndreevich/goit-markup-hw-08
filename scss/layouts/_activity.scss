@@ -1,0 +1,39 @@
+.activity {
+  padding-top: 0px;
+}
+.activity__list {
+  display: flex;
+  list-style: none;
+}
+.activity__list .activity__item:not(:last-child) {
+  margin-right: 30px;
+}
+.activity__item {
+  position: relative;
+}
+.activity__text {
+  content: "";
+  position: absolute;
+  display: flex;
+  font-style: normal;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--bg-main-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.activity__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
