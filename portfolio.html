@@ -35,7 +35,7 @@
         <ul class="list-contacts">
           <li class="item item-contacts">
             <a
-              class="link link-contacts"
+              class="link-contacts"
               href="mailto:info@devstudio.com"
               title="написать письмо"
             >
@@ -46,11 +46,7 @@
             >
           </li>
           <li class="item item-contacts">
-            <a
-              class="link link-contacts"
-              href="tel:+380961111111"
-              title="позвонить"
-            >
+            <a class="link-contacts" href="tel:+380961111111" title="позвонить">
               <svg class="header-icon" width="10" height="16">
                 <use href="./image/icon.svg#icon-smartphone"></use>
               </svg>
@@ -58,6 +54,134 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- mobile menu -->
+      <div class="container mobile-wrapper">
+        <a class="link link-logo-header logo" href="index.html" lang="en"
+          >Web<span class="logo-header">Studio</span></a
+        >
+        <button
+          type="button"
+          class="mob-menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="mob-menu__open-icon"
+              href="./image/icon.svg#icon-mob-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="mob-menu-container js-menu-container" id="mobile-menu">
+          <div class="mobi-menu">
+            <ul class="header-mob-menu list">
+              <li class="header-mob-menu__item">
+                <a class="header-mob-menu__link link" href="./index.html">
+                  Студия
+                </a>
+              </li>
+              <li class="header-mob-menu__item">
+                <a
+                  class="header-mob-menu__link link-active"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header-mob-menu__item">
+                <a class="header-mob-menu__link link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <!--mob contacts  -->
+            <ul class="header-mob-contacts list">
+              <li class="header-mob-contacts__item">
+                <a
+                  class="header-mob-contacts__link accent"
+                  href="tel:+380961111111"
+                  title="Набрать номер"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="header-mob-contacts__item">
+                <a
+                  class="header-mob-contacts__link"
+                  href="mailto:info@devstudio.com"
+                  title="Отправить письмо"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <!-- mob socials -->
+            <ul class="header-mob-socials list">
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Instagram"
+                  class="header-mob-socials__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Twitter"
+                  class="header-mob-socials__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Facebook"
+                  class="header-mob-socials__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Linkedin"
+                  class="header-mob-socials__link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            class="mob-menu-close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="mob-menu__close-icon"
+                href="./image/icon.svg#icon-close_mob-menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -85,13 +209,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_1_des.jpg    1x,
+                        ./image/desktop/portfolio_1_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_1_tab.jpg    1x,
+                        ./image/tablet/portfolio_1_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_1_mob.jpg    1x,
+                        ./image/mobile/portfolio_1_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_1_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Технокряк"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -110,13 +262,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_2_des.jpg    1x,
+                        ./image/desktop/portfolio_2_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_2_tab.jpg    1x,
+                        ./image/tablet/portfolio_2_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_2_mob.jpg    1x,
+                        ./image/mobile/portfolio_2_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_2_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -137,13 +317,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_3_des.jpg    1x,
+                        ./image/desktop/portfolio_3_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_3_tab.jpg    1x,
+                        ./image/tablet/portfolio_3_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_3_mob.jpg    1x,
+                        ./image/mobile/portfolio_3_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_3_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Ресторан Seafood"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -164,13 +372,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-4.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_4_des.jpg    1x,
+                        ./image/desktop/portfolio_4_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_4_tab.jpg    1x,
+                        ./image/tablet/portfolio_4_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_4_mob.jpg    1x,
+                        ./image/mobile/portfolio_4_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_4_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Проект Prime"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -191,13 +427,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-5.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_5_des.jpg    1x,
+                        ./image/desktop/portfolio_5_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_5_tab.jpg    1x,
+                        ./image/tablet/portfolio_5_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_5_mob.jpg    1x,
+                        ./image/mobile/portfolio_5_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_5_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Проект Boxes"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -218,13 +482,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_6_des.jpg    1x,
+                        ./image/desktop/portfolio_6_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_6_tab.jpg    1x,
+                        ./image/tablet/portfolio_6_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_6_mob.jpg    1x,
+                        ./image/mobile/portfolio_6_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_6_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Inspiration has no Borders"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -245,13 +537,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-7.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_7_des.jpg    1x,
+                        ./image/desktop/portfolio_7_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_7_tab.jpg    1x,
+                        ./image/tablet/portfolio_7_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_7_mob.jpg    1x,
+                        ./image/mobile/portfolio_7_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_7_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Издание Limited Edition"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -272,13 +592,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-8.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_8_des.jpg    1x,
+                        ./image/desktop/portfolio_8_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_8_tab.jpg    1x,
+                        ./image/tablet/portfolio_8_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_8_mob.jpg    1x,
+                        ./image/mobile/portfolio_8_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_8_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Проект LAB"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -299,13 +647,41 @@
             <li class="item-example item">
               <a class="link-example link" href="./portfolio.html">
                 <div class="example-card-thumb">
-                  <img
-                    class="image"
-                    src="./image/portfolio-9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        ./image/desktop/portfolio_9_des.jpg    1x,
+                        ./image/desktop/portfolio_9_des_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px )"
+                      srcset="
+                        ./image/tablet/portfolio_9_tab.jpg    1x,
+                        ./image/tablet/portfolio_9_tab_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px )"
+                      srcset="
+                        ./image/mobile/portfolio_9_mob.jpg    1x,
+                        ./image/mobile/portfolio_9_mob_2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="image"
+                      src="./image/mobile/portfolio_9_mob.jpg"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                      alt="Growing Business"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay-example">
                     <p class="example-text-thumb">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -401,5 +777,6 @@
         </div>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -40,7 +40,7 @@
         <ul class="list-contacts">
           <li class="item item-contacts">
             <a
-              class="link link-contacts"
+              class="link-contacts"
               href="mailto:info@devstudio.com"
               title="написать письмо"
             >
@@ -51,11 +51,7 @@
             >
           </li>
           <li class="item item-contacts">
-            <a
-              class="link link-contacts"
-              href="tel:+380961111111"
-              title="позвонить"
-            >
+            <a class="link-contacts" href="tel:+380961111111" title="позвонить">
               <svg class="header-icon" width="10" height="16">
                 <use href="./image/icon.svg#icon-smartphone"></use>
               </svg>
@@ -63,6 +59,135 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- mobile menu -->
+      <div class="container mobile-wrapper">
+        <a class="link link-logo-header logo" href="index.html" lang="en"
+          >Web<span class="logo-header">Studio</span></a
+        >
+        <button
+          type="button"
+          class="mob-menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="mob-menu__open-icon"
+              href="./image/icon.svg#icon-mob-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="mob-menu-container js-menu-container" id="mobile-menu">
+          <div class="mobi-menu">
+            <ul class="header-mob-menu list">
+              <li class="header-mob-menu__item">
+                <a
+                  class="header-mob-menu__link link-active header-mob-menu__link--current"
+                  href="./index.html"
+                >
+                  Студия
+                </a>
+              </li>
+              <li class="header-mob-menu__item">
+                <a class="header-mob-menu__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header-mob-menu__item">
+                <a class="header-mob-menu__link link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <!--mob contacts  -->
+            <ul class="header-mob-contacts list">
+              <li class="header-mob-contacts__item">
+                <a
+                  class="header-mob-contacts__link accent"
+                  href="tel:+380961111111"
+                  title="Набрать номер"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="header-mob-contacts__item">
+                <a
+                  class="header-mob-contacts__link"
+                  href="mailto:info@devstudio.com"
+                  title="Отправить письмо"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <!-- mob socials -->
+            <ul class="header-mob-socials list">
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Instagram"
+                  class="header-mob-socials__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Twitter"
+                  class="header-mob-socials__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Facebook"
+                  class="header-mob-socials__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="header-mob-socials__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Перейти на страничку Linkedin"
+                  class="header-mob-socials__link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            class="mob-menu-close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="mob-menu__close-icon"
+                href="./image/icon.svg#icon-close_mob-menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -158,8 +283,10 @@
                         <use href="./image/icon.svg#icon-modal-mark"></use>
                       </svg>
                     </span>
-                    Соглашаюсь с рассылкой и принимаю&nbsp;
-                    <a class="modal-consent-link" href="">Условия договора</a>
+                    <span class="custom-checkbox-text">
+                      Соглашаюсь с рассылкой и принимаю
+                      <a class="modal-consent-link" href="">Условия договора</a>
+                    </span>
                   </label>
                 </div>
                 <button class="modal-button" type="submit">Отправить</button>
@@ -232,7 +359,11 @@
             <li class="activity__item">
               <img
                 class="image"
-                src="./image/img4.jpg"
+                srcset="
+                  ./image/desktop/img1_des.jpg    1x,
+                  ./image/desktop/img1_des_2x.jpg 2x
+                "
+                src="./image/desktop/img1_des.jpg"
                 alt="пишем код"
                 width="370"
                 height="294"
@@ -242,7 +373,11 @@
             <li class="activity__item">
               <img
                 class="image"
-                src="./image/img5.jpg"
+                srcset="
+                  ./image/desktop/img2_des.jpg    1x,
+                  ./image/desktop/img2_des_2x.jpg 2x
+                "
+                src="./image/desktop/img2_des.jpg"
                 alt="создаем макет"
                 width="370"
                 height="294"
@@ -252,7 +387,11 @@
             <li class="activity__item">
               <img
                 class="image"
-                src="./image/img6.jpg"
+                srcset="
+                  ./image/desktop/img3_des.jpg    1x,
+                  ./image/desktop/img3_des_2x.jpg 2x
+                "
+                src="./image/desktop/img3_des.jpg"
                 alt="добавляем дизайн"
                 width="370"
                 height="294"
@@ -270,10 +409,20 @@
             <li class="item-team item">
               <img
                 class="image"
-                src="./image/img-3.jpg"
+                srcset="
+                  ./image/desktop/igor_270.jpg 270w,
+                  ./image/tablet/igor_354.jpg  354w,
+                  ./image/mobile/igor_450.jpg  450w,
+                  ./image/desktop/igor_540.jpg 540w,
+                  ./image/tablet/igor_708.jpg  708w,
+                  ./image/mobile/igor_900.jpg  900w
+                "
+                src="./image/mobile/igor_450.jpg"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
                 alt="Игорь Демьяненко Product Designer"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="title-card">
                 <h3 class="name">Игорь Демьяненко</h3>
@@ -313,10 +462,20 @@
             <li class="item-team item">
               <img
                 class="image"
-                src="./image/img-2.jpg"
+                srcset="
+                  ./image/desktop/olga_270.jpg 270w,
+                  ./image/tablet/olga_354.jpg  354w,
+                  ./image/mobile/olga_450.jpg  450w,
+                  ./image/desktop/olga_540.jpg 540w,
+                  ./image/tablet/olga_708.jpg  708w,
+                  ./image/mobile/olga_900.jpg  900w
+                "
+                src="./image/mobile/olga_450.jpg"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
                 alt="Ольга Репина Frontend Developer"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="title-card">
                 <h3 class="name">Ольга Репина</h3>
@@ -356,10 +515,20 @@
             <li class="item-team item">
               <img
                 class="image"
-                src="./image/img-1.jpg"
+                srcset="
+                  ./image/desktop/nikola_270.jpg 270w,
+                  ./image/tablet/nikola_354.jpg  354w,
+                  ./image/mobile/nikola_450.jpg  450w,
+                  ./image/desktop/nikola_540.jpg 540w,
+                  ./image/tablet/nikola_708.jpg  708w,
+                  ./image/mobile/nikola_900.jpg  900w
+                "
+                src="./image/mobile/nikola_450.jpg"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
                 alt="Николай Тарасов Marketing"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="title-card">
                 <h3 class="name">Николай Тарасов</h3>
@@ -399,10 +568,20 @@
             <li class="item-team item">
               <img
                 class="image"
-                src="./image/img.jpg"
+                srcset="
+                  ./image/desktop/mihail_270.jpg 270w,
+                  ./image/tablet/mihail_354.jpg  354w,
+                  ./image/mobile/mihail_450.jpg  450w,
+                  ./image/desktop/mihail_540.jpg 540w,
+                  ./image/tablet/mihail_708.jpg  708w,
+                  ./image/mobile/mihail_900.jpg  900w
+                "
+                src="./image/mobile/mihail_450.jpg"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
                 alt="Михаил Ермаков UI Designer"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="title-card">
                 <h3 class="name">Михаил Ермаков</h3>
@@ -569,5 +748,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

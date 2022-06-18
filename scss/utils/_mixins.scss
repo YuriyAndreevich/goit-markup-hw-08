@@ -1,6 +1,13 @@
-@mixin font($fw, $fs, $lh, $ls) {
-  font-weight: $fw;
-  font-size: $fs;
-  line-height: $lh;
-  letter-spacing: $ls;
+@mixin mq($type) {
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  @if $type == "retina" {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      @content;
+    }
+  }
 }
