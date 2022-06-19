@@ -1621,14 +1621,12 @@ ul {
   .item-example:not(:last-child) {
     margin-bottom: 30px;
     width: 450px;
-    height: 404px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .item-example {
     width: 354px;
-    height: 404px;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1644,7 +1642,6 @@ ul {
   .item-example {
     margin-right: 30px;
     margin-bottom: 30px;
-    height: 404px;
   }
   .item-example:nth-child(3n) {
     margin-right: 0;
@@ -1696,6 +1693,9 @@ ul {
   padding: 20px 24px;
   border: 1px solid var(--border-card-color);
   border-top: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .example-card-thumb {

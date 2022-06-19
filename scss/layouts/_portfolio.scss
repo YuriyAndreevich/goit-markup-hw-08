@@ -79,13 +79,11 @@
     &:not(:last-child) {
       margin-bottom: 30px;
       width: 450px;
-      height: 404px;
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     // flex-basis: calc((100%-30px) / 2);
     width: 354px;
-    height: 404px;
     margin-right: 30px;
     margin-bottom: 30px;
     &:nth-child(2n) {
@@ -99,7 +97,6 @@
     // flex-basis: calc((100%-60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-    height: 404px;
     &:nth-child(3n) {
       margin-right: 0;
     }
@@ -143,6 +140,7 @@
   padding: 20px 24px;
   border: 1px solid var(--border-card-color);
   border-top: none;
+  flex-grow: 1;
 }
 .example-card-thumb {
   position: relative;
