@@ -649,6 +649,12 @@ ul {
   color: var(--main-color);
 }
 
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
 .features__icon-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
