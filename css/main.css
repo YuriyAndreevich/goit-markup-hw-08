@@ -50,11 +50,11 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 468px) {
   .container {
     width: 480px;
   }
@@ -549,8 +549,8 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .clients__item {
-    -ms-flex-preferred-size: calc((100%-150px) / 6);
-        flex-basis: calc((100%-150px) / 6);
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
   }
   .clients__item:not(:last-child) {
     margin-right: 30px;
@@ -784,7 +784,6 @@ ul {
 @media screen and (min-width: 1200px) {
   .footer-soc-part {
     display: block;
-    margin-left: 93px;
   }
 }
 
@@ -1630,37 +1629,35 @@ ul {
 }
 
 .item-example {
+  margin-bottom: 30px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .item-example:not(:last-child) {
-    margin-bottom: 30px;
-    width: 450px;
+@media screen and (max-width: 1199px) {
+  .item-example:last-child {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .item-example {
-    width: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
     margin-right: 30px;
-    margin-bottom: 30px;
   }
   .item-example:nth-child(2n) {
     margin-right: 0;
-  }
-  .item-example:nth-last-child(-n + 1) {
-    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .item-example {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
     margin-right: 30px;
-    margin-bottom: 30px;
   }
   .item-example:nth-child(3n) {
     margin-right: 0;

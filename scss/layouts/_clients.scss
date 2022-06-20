@@ -39,7 +39,7 @@
     }
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100%-150px) / 6);
+    flex-basis: calc((100% - 150px) / 6);
     &:not(:last-child) {
       margin-right: 30px;
     }
